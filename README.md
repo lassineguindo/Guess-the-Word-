@@ -1,30 +1,42 @@
-# Guess-the-Word-
-This project implements a word guessing game in Python, following a four-part project. The game challenges the player to guess a secret word one letter at a time while enforcing input validation and tracking incorrect guesses.
+# Guess the Word Game
 
-Assignment Breakdown
-Part 1 – Secret Word and User Input
+This project is a Python-based word guessing game where the player tries to reveal a secret word by guessing one letter at a time. The game provides feedback on correct and incorrect guesses and tracks the number of incorrect attempts allowed.
 
-Secret Word Variable:
-A variable stores the secret word.
-Retrieving User’s Guess:
-The get_guess() function repeatedly prompts the user for input until a single, lowercase letter is entered. Input validation ensures the guess is exactly one character and in lowercase.
-Part 2 – Displaying Progress with Dashes
+## Features
 
-Dashes Variable:
-A string of dashes is created, with its length equal to that of the secret word, to represent unguessed letters.
-Updating the Display:
-The update_dashes() function takes the secret word, the current state of the dashes, and the latest guess to reveal correctly guessed letters without erasing previous correct guesses.
-Part 3 – Win/Lose Logic
+- **Random Word Selection**
+  - A secret word is randomly selected from a predefined list.
 
-Game Loop:
-The game runs in a loop that continues until the user either guesses the entire word or runs out of incorrect guesses.
-Tracking Incorrect Guesses:
-A variable guesses_left starts at 10 and decrements for each incorrect guess.
-End-of-Game Message:
-After the loop, the program prints whether the player has won (by guessing the word) or lost (by exhausting the allowed incorrect guesses).
-Part 4 – Random Word Selection
+- **Input Validation**
+  - Ensures that the user's guess is exactly one character.
+  - Confirms that the guess is a lowercase letter.
 
-Word List:
-A list of words is provided.
-Random Choice:
-The secret word is randomly chosen from the list using random.choice(), ensuring variety in each playthrough.
+- **Progress Display**
+  - Displays the secret word as a series of dashes.
+  - Correctly guessed letters replace the corresponding dashes.
+
+- **Win/Lose Logic**
+  - The game allows a maximum of 10 incorrect guesses.
+  - Displays a win message if the player reveals the whole word.
+  - Displays a lose message if the player runs out of guesses.
+
+## Code Overview
+
+- **Secret Word and Dashes**
+  - The secret word is selected randomly.
+  - A string of dashes, matching the length of the secret word, is created to represent unguessed letters.
+
+- **`get_guess` Function**
+  - Continuously prompts the user until a valid guess (one lowercase letter) is entered.
+
+- **`update_dashes` Function**
+  - Updates the displayed dashes by revealing letters that match the user's guess.
+
+- **Game Loop**
+  - Continues until the word is fully guessed or the user runs out of guesses.
+  - Tracks the number of incorrect guesses and provides feedback.
+
+- **End-of-Game Message**
+  - Informs the player if they have won or lost, displaying the secret word.
+
+

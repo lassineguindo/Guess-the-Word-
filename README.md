@@ -1,5 +1,5 @@
 # Guess-the-Word-
-This project implements a word guessing game in Python, following a four-part assignment. The game challenges the player to guess a secret word one letter at a time while enforcing input validation and tracking incorrect guesses.
+This project implements a word guessing game in Python, following a four-part project. The game challenges the player to guess a secret word one letter at a time while enforcing input validation and tracking incorrect guesses.
 
 Assignment Breakdown
 Part 1 – Secret Word and User Input
